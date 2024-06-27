@@ -5,13 +5,15 @@ let mytoken= ['auto'];//快速订阅访问入口, 留空则不启动快速订阅
 
 // 设置优选地址，不带端口号默认443，TLS订阅生成
 let addresses = [
-	'icook.tw:2053#官方优选域名',
+	'104.19.150.182:443#官方优选域名',
 	'cloudflare.cfgo.cc#优选官方线路',
 ];
 
 // 设置优选地址api接口
 let addressesapi = [
 	'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt', //可参考内容格式 自行搭建。
+	'https://addressesapi.090227.xyz/ip.164746.xyz',
+	'https://addressesapi.090227.xyz/CloudFlareYes',
 	//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesipv6api.txt', //IPv6优选内容格式 自行搭建。
 ];
 
@@ -34,16 +36,18 @@ let addressescsv = [
 
 let subconverter = "subapi-loadbalancing.pages.dev"; //在线订阅转换后端，目前使用CM的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
 let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; //订阅转换配置文件
-let noTLS = 'false'; //改为 true , 将不做域名判断 始终返回noTLS节点
+let noTLS = 'true'; //改为 true , 将不做域名判断 始终返回noTLS节点
 let link = '';
 let edgetunnel = 'ed';
 let RproxyIP = 'false';
 let proxyIPs = [//无法匹配到节点名就随机分配以下ProxyIP域名
 	'proxyip.multacom.fxxk.dedyn.io',
 	'proxyip.vultr.fxxk.dedyn.io',
+	'proxyip.aliyun.fxxk.dedyn.io',
+	'proxyip.oracle.fxxk.dedyn.io',		
 ];
-let CMproxyIPs = [
-	//'proxyip.aliyun.fxxk.dedyn.io:HK',//匹配节点名, 有HK就分配该ProxyIP域名
+let CMproxyIPs = ['proxyip.aliyun.fxxk.dedyn.io',
+	//'proxyip.aliyun.fxxk.dedyn.io:SG',//匹配节点名, 有HK就分配该ProxyIP域名
 ]
 let socks5DataURL = '';//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/socks5Data'
 let BotToken ='';
